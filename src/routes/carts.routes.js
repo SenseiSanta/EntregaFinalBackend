@@ -1,7 +1,7 @@
 /* ============= INICIO DE ROUTEO ============= */
 import express from 'express';
 const routerCarts = express.Router();
-import { getAllCarts, getCartByID, addCart, addProductToCart, delProductInCart, deleteCart } from '../controllers/carritos.controllers.js';
+import { getAllCarts, getCartByID, addCart, addProductToCart, delProductInCart, deleteCart, getCartByOwner } from '../controllers/carts.controllers.js';
 
 /* ============= Routing y metodos ============= */
 // Solicitando info de todos los carritos
@@ -9,6 +9,9 @@ routerCarts.get('/', getAllCarts);
 
 // Solicitando info de carrito segun id
 routerCarts.get('/:id', getCartByID);
+
+// Solicitando info de carrito segun dueño
+routerCarts.get('/usuario/:user', getCartByOwner);
 
 // Crear un nuevo carrito
 routerCarts.post('/', addCart);

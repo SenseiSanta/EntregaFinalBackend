@@ -1,4 +1,4 @@
-/* ------ Modulos ------ */
+/* ======================= Modulos ======================= */
 import { MessagesDAOMongoDB } from '../daos/Messages.DAO.js';
 import { UsersDAOMongoDB } from '../daos/Users.DAO.js';
 import { ProductsDAOMongoDB } from '../daos/Products.DAO.js';
@@ -7,13 +7,12 @@ import { config } from '../config/config.js';
 import { Container } from '../container/Container.js';
 import { logger } from '../utils/logger.js';
 
-// Contenedores de conexion
+/* ============ Instancia de containers ============ */
 let cartsDB = null;
 let messagesDB = null;
 let productsDB = null;
 let usersDB = null;
 
-// Persistencia de datos
 if (config.server.PERS === 'archive') {
     cartsDB = new Container('carritos');
     productsDB = new Container('productos');
@@ -25,6 +24,10 @@ if (config.server.PERS === 'archive') {
     messagesDB = new MessagesDAOMongoDB();
     usersDB = new UsersDAOMongoDB();
 }
+
+/*========================================================*/
+/*======================= Services  ======================*/
+/*========================================================*/
 
 export async function getMessages() {
     try {
@@ -77,6 +80,16 @@ export async function saveInfoUser(userInfo) {
 export async function addNewCart(owner) {
     try {
         let state = await cartsDB.save(owner);
+        return state
+    } catch (error) {
+        logger.error(error)
+        throw new Error (`Ha ocurrido un error al intentar crear el carrito. Intente nuevamente`)
+    }
+}
+
+export async function searchCartByOwner(owner) {
+    try {
+        let state = await cartsDB.getByOwner(owner);
         return state
     } catch (error) {
         logger.error(error)

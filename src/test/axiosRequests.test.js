@@ -34,7 +34,7 @@ async function askForProducts() {
         return response;
     })
     .catch(function (error) {
-        console.log(error);
+        logger.error(error);
     });
 }
 
@@ -48,7 +48,7 @@ async function askForProductById() {
         return response;
     })
     .catch(function (error) {
-        console.log(error);
+        logger.error(error);
     });
 }
 
@@ -63,12 +63,10 @@ async function addNewProduct() {
         data: newProduct
     })
     .then(function (response) {
-        logger.info(`Se acaba de agregar un producto`)
-        console.log(response.data.data.doc)
         return response
     })
     .catch(function (error) {
-        console.log(error);
+        logger.error(error);
     });
 }
 
@@ -86,7 +84,7 @@ async function updateProduct() {
         return response;
     })
     .catch(function (error) {
-        console.log(error);
+        logger.error(error);
     });
 }
 
@@ -103,7 +101,7 @@ async function delProduct() {
         return response;
     })
     .catch(function (error) {
-        console.log(error);
+        logger.error(error);
     });
 }
 

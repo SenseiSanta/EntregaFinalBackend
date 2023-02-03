@@ -604,3 +604,193 @@
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async updateMessageByID (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/services/messages.service.js:34:20)
     at async updateMessage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/messages.controllers.js:46:29)
+[2023-02-02T16:53:41.414] [ERROR] default - El id ingresado: ("63dbbae1466314dbcd846ff") -> No coincide con ningun dato existente, revise los parametros de entrada
+[2023-02-02T17:29:53.470] [ERROR] default - El id ingresado: ("santi") -> No coincide con ningun dato existente, revise los parametros de entrada
+[2023-02-02T17:58:52.178] [ERROR] default - ReferenceError: Cannot access 'cart' before initialization
+    at file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:184:25
+    at async cartPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:182:22)
+[2023-02-02T18:01:30.836] [ERROR] default - SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at cartPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:183:14)
+[2023-02-02T18:01:46.795] [ERROR] default - SyntaxError: Unexpected token _ in JSON at position 4
+    at JSON.parse (<anonymous>)
+    at cartPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:183:14)
+[2023-02-02T18:03:10.543] [ERROR] default - SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at cartPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:183:31)
+[2023-02-02T18:06:17.650] [ERROR] default - ReferenceError: products is not defined
+    at cartPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:184:51)
+[2023-02-02T18:06:51.623] [ERROR] default - ReferenceError: products is not defined
+    at cartPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:184:51)
+[2023-02-02T18:07:18.350] [ERROR] default - ReferenceError: products is not defined
+    at cartPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:184:51)
+[2023-02-02T18:07:34.024] [ERROR] default - ReferenceError: products is not defined
+    at cartPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:184:51)
+[2023-02-02T18:08:45.918] [ERROR] default - ReferenceError: products is not defined
+    at cartPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:184:51)
+[2023-02-02T18:13:02.651] [ERROR] default - TypeError: Cannot convert undefined or null to object
+    at Function.values (<anonymous>)
+    at cartPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:183:28)
+[2023-02-02T18:13:23.644] [ERROR] default - TypeError: Cannot convert undefined or null to object
+    at Function.values (<anonymous>)
+    at cartPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:183:28)
+[2023-02-02T18:16:15.462] [ERROR] default - ReferenceError: products is not defined
+    at cartPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:184:51)
+[2023-02-02T18:16:37.336] [ERROR] default - ReferenceError: products is not defined
+    at cartPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:184:51)
+[2023-02-02T18:17:14.483] [ERROR] default - ReferenceError: products is not defined
+    at cartPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:184:51)
+[2023-02-02T18:18:35.313] [ERROR] default - ReferenceError: Cannot access 'products' before initialization
+    at cartPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:183:26)
+[2023-02-02T18:26:19.148] [ERROR] default - TypeError: element.push is not a function
+    at file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:186:21
+    at Proxy.forEach (<anonymous>)
+    at cartPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:184:18)
+[2023-02-02T20:32:45.994] [ERROR] default - MongoExpiredSessionError: Cannot use a session that has ended
+    at applySession (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\sessions.js:660:16)
+    at Connection.command (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:271:53)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:211:18
+    at Object.callback (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:302:13)
+    at ConnectionPool.processWaitQueue (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:481:33)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:205:37
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-02-02T20:53:25.334] [ERROR] default - MongoExpiredSessionError: Cannot use a session that has ended
+    at applySession (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\sessions.js:660:16)
+    at Connection.command (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:271:53)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:211:18
+    at Object.callback (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:302:13)
+    at ConnectionPool.processWaitQueue (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:481:33)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:205:37
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-02-03T14:11:44.284] [ERROR] default - Error al eliminar el objeto
+[2023-02-03T14:46:44.344] [ERROR] default - ReferenceError: searchUserCart is not defined
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:168:18)
+    at Socket.emit (node:events:513:28)
+    at Socket.emitUntyped (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\typed-events.js:69:22)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\socket.js:614:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2023-02-03T14:46:44.349] [ERROR] default - ReferenceError: searchUserCart is not defined
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:168:18)
+    at Socket.emit (node:events:513:28)
+    at Socket.emitUntyped (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\typed-events.js:69:22)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\socket.js:614:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2023-02-03T14:46:44.351] [ERROR] default - ReferenceError: searchUserCart is not defined
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:168:18)
+    at Socket.emit (node:events:513:28)
+    at Socket.emitUntyped (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\typed-events.js:69:22)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\socket.js:614:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2023-02-03T14:46:50.224] [ERROR] default - ReferenceError: searchUserCart is not defined
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:168:18)
+    at Socket.emit (node:events:513:28)
+    at Socket.emitUntyped (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\typed-events.js:69:22)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\socket.js:614:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2023-02-03T14:46:50.229] [ERROR] default - ReferenceError: searchUserCart is not defined
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:168:18)
+    at Socket.emit (node:events:513:28)
+    at Socket.emitUntyped (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\typed-events.js:69:22)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\socket.js:614:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2023-02-03T14:46:50.232] [ERROR] default - ReferenceError: searchUserCart is not defined
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:168:18)
+    at Socket.emit (node:events:513:28)
+    at Socket.emitUntyped (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\typed-events.js:69:22)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\socket.js:614:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2023-02-03T14:47:12.136] [ERROR] default - ReferenceError: searchUserCart is not defined
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:168:18)
+    at Socket.emit (node:events:513:28)
+    at Socket.emitUntyped (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\typed-events.js:69:22)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\socket.js:614:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2023-02-03T14:47:12.139] [ERROR] default - ReferenceError: searchUserCart is not defined
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:168:18)
+    at Socket.emit (node:events:513:28)
+    at Socket.emitUntyped (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\typed-events.js:69:22)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\socket.js:614:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2023-02-03T14:47:12.141] [ERROR] default - ReferenceError: searchUserCart is not defined
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:168:18)
+    at Socket.emit (node:events:513:28)
+    at Socket.emitUntyped (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\typed-events.js:69:22)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\socket.js:614:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2023-02-03T14:47:39.159] [ERROR] default - ReferenceError: user is not defined
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:168:39)
+    at Socket.emit (node:events:513:28)
+    at Socket.emitUntyped (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\typed-events.js:69:22)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\socket.js:614:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2023-02-03T14:47:39.182] [ERROR] default - ReferenceError: user is not defined
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:168:39)
+    at Socket.emit (node:events:513:28)
+    at Socket.emitUntyped (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\typed-events.js:69:22)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\socket.js:614:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2023-02-03T14:47:39.196] [ERROR] default - ReferenceError: user is not defined
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:168:39)
+    at Socket.emit (node:events:513:28)
+    at Socket.emitUntyped (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\typed-events.js:69:22)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\socket.js:614:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2023-02-03T14:47:45.680] [ERROR] default - ReferenceError: user is not defined
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:168:39)
+    at Socket.emit (node:events:513:28)
+    at Socket.emitUntyped (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\typed-events.js:69:22)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\socket.js:614:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2023-02-03T14:47:45.684] [ERROR] default - ReferenceError: user is not defined
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:168:39)
+    at Socket.emit (node:events:513:28)
+    at Socket.emitUntyped (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\typed-events.js:69:22)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\socket.js:614:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2023-02-03T14:47:45.687] [ERROR] default - ReferenceError: user is not defined
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:168:39)
+    at Socket.emit (node:events:513:28)
+    at Socket.emitUntyped (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\typed-events.js:69:22)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\socket.js:614:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2023-02-03T14:48:50.272] [ERROR] default - Error: Hay un problema con el carrito de santi. Avise a nuestros administradores para corregir el inconveniente
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:170:15)
+[2023-02-03T14:48:51.222] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'find')
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:177:49)
+[2023-02-03T14:48:51.224] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'find')
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:177:49)
+[2023-02-03T14:50:58.990] [ERROR] default - Error: Hay un problema con el carrito de santi. Avise a nuestros administradores para corregir el inconveniente
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:171:15)
+[2023-02-03T14:51:00.014] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'find')
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:178:49)
+[2023-02-03T14:51:00.024] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'find')
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:178:49)
+[2023-02-03T14:52:45.199] [ERROR] default - Error: Hay un problema con el carrito de santi. Avise a nuestros administradores para corregir el inconveniente
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:171:15)
+[2023-02-03T14:52:46.084] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'find')
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:178:49)
+[2023-02-03T14:52:46.090] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'find')
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:178:49)
+[2023-02-03T14:54:25.481] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'find')
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:178:49)
+[2023-02-03T14:55:17.374] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'push')
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:180:29)
+[2023-02-03T15:00:56.814] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'indexOf')
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:188:41)
+[2023-02-03T15:02:23.960] [ERROR] default - El id ingresado: ("null") -> No coincide con ningun dato existente, revise los parametros de entrada
+[2023-02-03T15:28:59.565] [ERROR] default - Error: Hay un problema con el producto elegido. Avise a nuestros administradores para corregir el inconveniente
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:211:17)
+[2023-02-03T15:29:49.168] [ERROR] default - Error: Hay un problema con el producto elegido. Avise a nuestros administradores para corregir el inconveniente
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:212:17)
+[2023-02-03T15:57:27.748] [ERROR] default - Error: El producto que intenta borrar no se encuentra en el carrito
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:216:23)
+[2023-02-03T15:59:59.653] [ERROR] default - Error: El producto que intenta borrar no se encuentra en el carrito
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:216:23)
+[2023-02-03T16:01:07.106] [ERROR] default - Error: El producto que intenta borrar no se encuentra en el carrito
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:216:23)
+[2023-02-03T16:12:11.694] [ERROR] default - Error: Algo ha ocurrido queriendo agregar el item al carrito
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:193:21)

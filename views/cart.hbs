@@ -1,17 +1,35 @@
 <div class="container mt-3">
     {{> welcome}}
 </div>
-<table class="table w-50 mt-5 mx-auto">
-  <thead>
-    <tr>
-      <th class="col-4">Producto</th>
-      <th class="col-8">Precio</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Argumentos de entrada</td>
-      <td>----------</td>
-    </tr>
-  </tbody>
+  {{#if admin}}
+  <h3 class="noItemsCart"> Debe entrar con una cuenta no administrador para usar el carrito </h3>
+  {{else}}
+    {{#if products}}
+      <div id="cartSection">
+        <table class="table w-50 mt-5 mx-auto">
+          <thead>
+            <tr>
+              <th class="col-4">Producto</th>
+              <th class="col-3">Precio</th>
+              <th class="col-3">Cantidad</th>
+              <th class="col-2">Eliminar</th>
+            </tr>
+          </thead>
+          <tbody id="productsCart">
+            {{#each products}}
+              <tr>
+                <td>{{product}}</td>
+                <td>${{price}}</td>
+                <td>{{qty}}</td>
+                <td> <button onClick='delProdFromCart("{{product}}")'> -1 </button> </td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+        {{> cartButtons}}
+      </div>
+    {{else}}
+      <h3  class="noItemsCart"> El carrito esta vacio </h3>
+    {{/if}}
+  {{/if}}
 </table>

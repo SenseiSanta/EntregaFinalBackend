@@ -1,3 +1,4 @@
+/* ======================= Modulos ======================= */
 import { MessagesDAOMongoDB } from "../daos/Messages.DAO.js"
 import { config } from '../config/config.js';
 import { Container } from '../container/Container.js';
@@ -11,7 +12,10 @@ if (config.server.PERS === 'archive') {
     msgDB = new MessagesDAOMongoDB()
 }
 
-/* ================== Servicios ================== */
+/*========================================================*/
+/*======================= Services  ======================*/
+/*========================================================*/
+
 export async function getAllMessagesData() {
     try {
         return await msgDB.getAll()

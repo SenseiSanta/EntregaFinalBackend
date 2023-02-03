@@ -1,4 +1,5 @@
 import fs from 'fs/promises';
+import { logger } from '../utils/logger.js';
 
 export class Container {
     constructor(archive) {
@@ -11,7 +12,7 @@ export class Container {
             return objs;
         }
         catch(error) {
-            console.log(error)
+            logger.error(error)
         }
     }
 
@@ -36,7 +37,7 @@ export class Container {
             };
 
         } catch (error) {
-            console.log(error)
+            logger.error(error)
         }
     }
 
@@ -51,7 +52,7 @@ export class Container {
             return objs[indexObj];
 
         } catch (error) {
-            console.log(error)
+            logger.error(error)
             return {error: 'Objeto no encontrado'}
         }
     }
@@ -71,7 +72,7 @@ export class Container {
             return true
 
         } catch (error) {
-            console.log(error)
+            logger.error(error)
             return false
         }
     }
@@ -94,7 +95,7 @@ export class Container {
             return true
 
         } catch (error) {
-            console.log(error)
+            logger.error(error)
             return false
         }
     }

@@ -1,18 +1,18 @@
 /* ============== Imports Grales. ============== */
 import { logger } from '../utils/logger.js';
-import { getAllMessagesData, getMsgDataID, updateMessageByID, addNewMessage, deleteMsgByID } from '../services/messages.service.js'
+/* import { getAllOrdersData, getOrderDataID, updateOrderByID, addNewOrder, deleteOrderByID } from '../services/Orders.service.js' */
 import CustomError from '../classes/CustomError.class.js';
 
 /* ============= Mensaje de error ============= */
 const internalError = 'Error en el servidor, intente nuevamente';
 
 /* =============== CONTROLADORES =============== */
-export async function getAllMessages (req, res) {
+export async function getAllOrders (req, res) {
     try {
-        let messageList = await getAllMessagesData()
+        let orderList = await getAllOrdersData()
         res.status(200).json({
             status: 200,
-            data: messageList
+            data: orderList
         });
     } catch (error) {
         logger.error(error);
@@ -23,10 +23,10 @@ export async function getAllMessages (req, res) {
     }
 }
 
-export async function getMessageByID (req, res) {
+export async function getOrderByID (req, res) {
     try {
         const id = req.params['id'];
-        let data = await getMsgDataID(id)
+        let data = await getOrderDataID(id)
         if (data == undefined) {
             res.status(404).json({
                 status: 404,
@@ -47,7 +47,7 @@ export async function getMessageByID (req, res) {
     }
 }
 
-export async function updateMessage (req, res) {
+export async function updateOrder (req, res) {
     try {
         const newObject = {};
         const id = req.params['id'];
@@ -55,7 +55,7 @@ export async function updateMessage (req, res) {
         let { author, text } = req.body;
         if (author) { newObject["author"] = author };
         if (text) { newObject["text"] = text };
-        const actualizado = await updateMessageByID(id, newObject)
+        const actualizado = await updateOrderByID(id, newObject)
         if (actualizado.state.update == true) {
             res.status(201).json({
                 status: 201,
@@ -76,7 +76,7 @@ export async function updateMessage (req, res) {
     }
 }
 
-export async function addMessage (req, res) {
+export async function addOrder (req, res) {
     try {
         let { author, text } = req.body;
         if (!author || !text) {
@@ -88,7 +88,7 @@ export async function addMessage (req, res) {
                 text,
                 timestamp: new Date().toLocaleString('es-AR')
             }
-            let data = await addNewMessage(newObject);
+            let data = await addNewOrder(newObject);
             res.status(201).json({
                 status: 201,
                 data: data
@@ -103,10 +103,10 @@ export async function addMessage (req, res) {
     }
 }
 
-export async function deleteMessage (req, res) {
+export async function deleteOrder (req, res) {
     try {
         const id = req.params['id'];
-        const eliminado = await deleteMsgByID(id)
+        const eliminado = await deleteOrderByID(id)
         if (eliminado.state.delete == true) {
             res.status(200).json({
                 status: 200,

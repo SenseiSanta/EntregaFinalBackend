@@ -1,5 +1,5 @@
 /* ============ Imports Grales. ============ */
-import {getMessages, getProducts, getUsers, getUserById, saveInfoUser} from '../services/initial.service.js'
+import {getMessages, getProducts, getUsers, getUserById, saveInfoUser, searchCartByOwner} from '../services/initial.service.js'
 import { logger } from '../utils/logger.js';
 import {registerEmailConfirmation as adminEmail} from '../utils/registerSendEmail.js';
 import { PORT } from '../../server.js';
@@ -179,7 +179,28 @@ export async function registerCredentials(req, res) {
 export async function cartPage(req, res) {
     try {
         const username = req.user.username;
-        res.status(200).render('cart', {username})
+        const admin = req.user.admin;
+        const cart = await searchCartByOwner(username)
+        const products = cart[0].products
+        products.forEach(element => {
+            element.price = element.price * element.qty
+        });
+        res.status(200).render('cart', {username, products, admin})
+    } catch (error) {
+        logger.error(error);
+        res.status(500).json({
+            status: 500,
+            error: internalError
+        })
+    }
+}
+
+//Renderizado de la pagina del CHAT
+export async function chatPage(req, res) {
+    try {
+        const username = req.user.username;
+        const admin = req.user.admin;
+        res.status(200).render('chat', {username, admin})
     } catch (error) {
         logger.error(error);
         res.status(500).json({

@@ -1,3 +1,4 @@
+/* ======================= Modulos ======================= */
 import { ProductsDAOMongoDB } from "../daos/Products.DAO.js"
 import { config } from '../config/config.js';
 import { Container } from '../container/Container.js';
@@ -11,7 +12,10 @@ if (config.server.PERS === 'archive') {
     db = new ProductsDAOMongoDB()
 }
 
-/* ================== Servicios ================== */
+/*========================================================*/
+/*======================= Services  ======================*/
+/*========================================================*/
+
 export async function getAllProductsData() {
     try {
         return await db.getAll()

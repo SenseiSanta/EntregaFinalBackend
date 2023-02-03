@@ -42,7 +42,5 @@ let contador = 0;
 
 process.on("message", (msg) => {
     contador = numerosRandom(msg)
-    console.log(contador)
-    console.log(`enviado desde principal: ${contador}`)
     process.send(contador)
 });

@@ -8,7 +8,6 @@ const UsuariosSchema = new Schema({
     address: {type: String, require:true, max:30},
     email: {type: String, require:true, max:50},
     image: {type: String, require:true, max:40},
-    cartID: {type: String, require: true, max:40},
     admin: {type: Boolean, require:true}
 });
 

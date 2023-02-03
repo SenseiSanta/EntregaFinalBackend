@@ -1,7 +1,7 @@
 /* ============= INICIO DE ROUTEO ============= */
 import express from 'express';
 const routerProducts = express.Router();
-import { getAllProducts, getProductByID, addProduct, updateProduct, deleteProduct } from '../controllers/productos.controllers.js';
+import { getAllProducts, getProductByID, addProduct, updateProduct, deleteProduct } from '../controllers/products.controllers.js';
 
 /* ============= Routing y metodos ============= */
 // Solicitando info de todos los productos

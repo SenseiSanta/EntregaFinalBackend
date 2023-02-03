@@ -38,4 +38,22 @@ export class ProductsDAOMongoDB extends ContainerMongoDB {
             await this.conn.disconnect();
         }
     }
+
+    async getByProdName(product) {
+        try {
+            await this.conn.connect();
+            const doc = await this.colection.find({product: product});
+            if (doc == '') {
+                return undefined;
+            } else {
+                return doc
+            }
+        }
+        catch(error) {
+            console.log(error);
+        } finally {
+            await this.conn.disconnect();
+        }
+    }
+
 }

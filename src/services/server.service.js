@@ -1,16 +1,33 @@
-/* === Logger === */
+/* ======================= Modulos ======================= */
 import { logger } from '../utils/logger.js';
-
-/*========================================================*/
-/*===================== Services  =====================*/
-/*========================================================*/
-
 import { ProductsDAOMongoDB } from "../daos/Products.DAO.js"
 import { MessagesDAOMongoDB } from '../daos/Messages.DAO.js';
 import { UsersDAOMongoDB } from '../daos/Users.DAO.js';
-const productsDB = new ProductsDAOMongoDB();
-const messagesDB = new MessagesDAOMongoDB();
-const usersDB = new UsersDAOMongoDB();
+import { CartsDaoMongoDB } from '../daos/Carts.DAO.js';
+import { config } from '../config/config.js';
+import { Container } from '../container/Container.js';
+
+/* ============ Instancia de containers ============ */
+let productsDB = null;
+let messagesDB = null;
+let usersDB = null;
+let cartsDB = null;
+
+if (config.server.PERS === 'archive') {
+    productsDB = new Container('productos');
+    messagesDB = new Container('mensajes');
+    usersDB = new Container('usuarios');
+    cartsDB = new Container('carritos')
+} else if (config.server.PERS === 'mongodb') {
+    productsDB = new ProductsDAOMongoDB();
+    messagesDB = new MessagesDAOMongoDB();
+    usersDB = new UsersDAOMongoDB();
+    cartsDB = new CartsDaoMongoDB()
+}
+
+/*========================================================*/
+/*======================= Services  ======================*/
+/*========================================================*/
 
 export async function getProductDB() {
     try {
@@ -21,9 +38,18 @@ export async function getProductDB() {
     };
 };
 
-export async function getUserFromDB() {
+export async function getProductByName(product) {
     try {
-        return await usersDB.getAll();
+        return await productsDB.getByProdName(product);
+    } catch (error) {
+        logger.error(`Error en servicios de servidor: ${error}`);
+        throw new Error ('Ha ocurrido un error al obtener los datos de la BD');
+    };
+};
+
+export async function getUserFromDB(user) {
+    try {
+        return await usersDB.getUserByUsername(user);
     } catch (error) {
         logger.error(`Error en servicios de servidor: ${error}`);
         throw new Error ('Ha ocurrido un error al obtener los datos de la BD');
@@ -51,6 +77,15 @@ export async function saveMessageFromSocket(msg) {
 export async function saveProductFromSocket(product) {
     try {
         return await productsDB.save(product);
+    } catch (error) {
+        logger.error(`Error en servicios de servidor: ${error}`);
+        throw new Error ('Ha ocurrido un error al obtener los datos de la BD');
+    }
+};
+
+export async function searchUserCart(user) {
+    try {
+        return await cartsDB.getByOwner(user);
     } catch (error) {
         logger.error(`Error en servicios de servidor: ${error}`);
         throw new Error ('Ha ocurrido un error al obtener los datos de la BD');

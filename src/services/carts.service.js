@@ -1,13 +1,14 @@
+/* ======================= Modulos ======================= */
 import { ProductsDAOMongoDB } from '../daos/Products.DAO.js';
 import { CartsDaoMongoDB } from '../daos/Carts.DAO.js';
 import { logger } from '../utils/logger.js';
 import { config } from '../config/config.js';
 import { Container } from '../container/Container.js';
 
+/* ============ Instancia de containers ============ */
 let cartsDB = null;
 let productsDB = null;
 
-// Persistencia de datos
 if (config.server.PERS === 'archive') {
     cartsDB = new Container('carritos')
     productsDB = new Container('productos')
@@ -15,6 +16,10 @@ if (config.server.PERS === 'archive') {
     cartsDB = new CartsDaoMongoDB()
     productsDB = new ProductsDAOMongoDB()
 }
+
+/*========================================================*/
+/*======================= Services  ======================*/
+/*========================================================*/
 
 export async function getAllCartData() {
     try {
@@ -32,6 +37,16 @@ export async function getDataID(id) {
     } catch (error) {
         logger.error(error)
         throw new Error (`Ha ocurrido un error al obtener los datos del carrito solicitado con ID ${id}`)
+    }
+}
+
+export async function searchCartByOwner(owner) {
+    try {
+        let state = await cartsDB.getByOwner(owner);
+        return state
+    } catch (error) {
+        logger.error(error)
+        throw new Error (`Ha ocurrido un error al intentar crear el carrito. Intente nuevamente`)
     }
 }
 

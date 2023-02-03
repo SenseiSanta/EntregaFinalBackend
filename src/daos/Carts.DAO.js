@@ -33,4 +33,21 @@ export class CartsDaoMongoDB extends ContainerMongoDB {
             await this.conn.disconnect();
         }
     }
+
+    async getByOwner(owner) {
+        try {
+            await this.conn.connect();
+            const doc = await this.colection.find({owner: owner});
+            if (doc == '') {
+                return undefined;
+            } else {
+                return doc
+            }
+        }
+        catch(error) {
+            console.log(error);
+        } finally {
+            await this.conn.disconnect();
+        }
+    }
 }

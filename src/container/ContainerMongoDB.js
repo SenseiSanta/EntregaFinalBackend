@@ -27,7 +27,7 @@ export class ContainerMongoDB {
         try {
             await this.conn.connect();
             let doc = await this.colection.create(obj);
-            return {status: 'Objeto agregado', doc: doc}
+            return doc
         } catch (error) {
             console.log(error)
             return {error: 'El objeto no se ha guardado. Intenta con otro nombre'}

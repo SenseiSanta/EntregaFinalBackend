@@ -1,6 +1,6 @@
 /* ============== Imports Grales. ============== */
 import { logger } from '../utils/logger.js';
-import { getAllCartData, getDataID, addNewCart, updateCart, deleteCartByID } from '../services/carts.service.js'
+import { getAllCartData, getDataID, addNewCart, updateCart, deleteCartByID, searchCartByOwner } from '../services/carts.service.js'
 import { getProdDataID } from '../services/products.service.js';
 
 /* ============= Mensaje de error ============= */
@@ -31,6 +31,30 @@ export async function getCartByID (req, res) {
             res.status(404).json({
                 status: 404,
                 error: 'No hay ningun ID que coincida con el solicitado, revise los parametros de entrada'
+            });
+        } else {
+            res.status(200).json({
+                status: 200,
+                data: data
+            });
+        }
+    } catch (error) {
+        logger.error(error)
+        res.status(500).json({
+            status: 500,
+            error: internalError
+        })
+    }
+}
+
+export async function getCartByOwner (req, res) {
+    try {
+        const user = req.params['user'];
+        let data = await searchCartByOwner(user)
+        if (data == undefined) {
+            res.status(404).json({
+                status: 404,
+                error: 'No hay ningun usuario que coincida con lo solicitado, revise los parametros de entrada'
             });
         } else {
             res.status(200).json({
@@ -88,12 +112,13 @@ export async function addProductToCart (req, res) {
                     error: 'No se ha encontrado ningun producto con ese id, por favor revise los parametros ingresados'
                 });
             } else {
-                let { product } = productData;
+                let { product, price, _id } = productData;
                 let productExistsCart = cartData.products.find(element => element.product == product);
                 if (productExistsCart == undefined) {
                     cartData.products.push({
-                        _id: prodId,
+                        _id,
                         product,
+                        price,
                         qty: 1})
                 } else {
                     let index = cartData.products.indexOf(productExistsCart)

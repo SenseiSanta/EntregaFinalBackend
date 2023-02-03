@@ -1,3 +1,4 @@
+/* ======================= Modulos ======================= */
 import { UsersDAOMongoDB } from "../daos/Users.DAO.js"
 import { config } from '../config/config.js';
 import { Container } from '../container/Container.js';
@@ -10,6 +11,10 @@ if (config.server.PERS === 'archive') {
 } else if (config.server.PERS === 'mongodb') {
     db = new UsersDAOMongoDB();
 }
+
+/*========================================================*/
+/*======================= Services  ======================*/
+/*========================================================*/
 
 export async function getAllUsersData() {
     try {
