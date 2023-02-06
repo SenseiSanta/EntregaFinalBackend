@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "description": "Este trabajo fue desarrollado por Santigo Olivera a lo largo de 6 meses durante la cursada de Desarrollo Backend como requisito para aprobar la misma",
   "main": "server.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "start": "node server.js",
     "start:dev": "nodemon server.js",
