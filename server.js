@@ -11,6 +11,7 @@ import multer from "multer";
 import { config } from "./src/config/config.js";
 import { Server as HttpServer } from "http";
 import { Server as IOServer } from "socket.io";
+import { orderEmailConfirmation as orderEmail } from "./src/utils/ordersSendEmail.js";
 
 /*=================== Logger ===================*/
 import { logger } from "./src/utils/logger.js";
@@ -81,11 +82,9 @@ app.use("/api/productos-test", routerProductsTest);
 app.use("/api/usuarios", routerUsers);
 app.use("/api/ordenes", routerOrders);
 app.all("*", (req, res) => {
-  res.status(404).json({
-    status: 404,
-    route: `${req.method} ${req.url}`,
-    msg: `No implemented route`
-  })
+  let method = req.method;
+  let url = req.url;
+  res.status(404).render('routeError', {method, url})
 });
 
 /*============================================================*/
@@ -121,7 +120,7 @@ if (cluster.isPrimary && SERVER_MODE == 'CLUSTER') {
 }
 
 /*========== Solicitar servicios ==========*/
-import { getProductDB, getUserFromDB, getMessagesDB, saveMessageFromSocket, saveProductFromSocket, getProductByName, searchUserCart } from './src/services/server.service.js'
+import { getProductDB, getUserFromDB, getMessagesDB, saveMessageFromSocket, saveProductFromSocket, getProductByName, searchUserCart, postNewOrder } from './src/services/server.service.js'
 
 io.use(wrap(sessionMiddleware))
 
@@ -201,7 +200,7 @@ io.on("connection", async (socket) => {
 
   socket.on('del-product-from-cart', async (product) => {
     try {
-      let user = req.session.passport.user
+      let user = req.session.passport.user;
       let cart = await searchUserCart(user);
       if (cart == undefined) {
         throw new Error (`Hay un problema con el carrito de ${user}. Avise a nuestros administradores para corregir el inconveniente`)
@@ -235,13 +234,39 @@ io.on("connection", async (socket) => {
       logger.error(error);
     }
   });
+
+  socket.on('confirm-buy-order', async () => {
+    try {
+      let user = req.session.passport.user;
+      let userData = await getUserByUsername(user)
+      let { email } = userData[0]
+      let userCart = await searchUserCart(user);
+      let order = await postNewOrder(userCart[0], user, email)
+      console.log(order)
+      if (order != false) {
+        let productsQty = userCart[0].products.length;
+        userCart[0].products.splice(0, productsQty)
+        let cartReset = await updateCart(userCart[0], userCart[0]._id)
+        if (cartReset) {
+          console.log('Perfecto')
+          orderEmail(order)
+        } else {
+          throw new Error ('El carrito no fue reiniciado')
+        }
+      } else {
+        throw new Error ('Su orden no ha sido procesada, intente nuevamente mas tarde')
+      }
+    } catch (error) {
+      logger.error(error)
+    }
+  });
 });
 
 /*=============== Normalizacion de datos ===============*/
 import { normalize, schema, denormalize } from "normalizr";
 import compression from "compression";
-import {updateCart, getDataID} from './src/services/carts.service.js';
-import {getProdDataID} from './src/services/products.service.js';
+import { updateCart, getDataID } from './src/services/carts.service.js';
+import { getUserByUsername } from "./src/services/initial.service.js";
 
 const schemaAuthors = new schema.Entity("author", {}, { idAttribute: "email" });
 const schemaMensaje = new schema.Entity(

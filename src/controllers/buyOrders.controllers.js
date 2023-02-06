@@ -1,6 +1,6 @@
 /* ============== Imports Grales. ============== */
 import { logger } from '../utils/logger.js';
-/* import { getAllOrdersData, getOrderDataID, updateOrderByID, addNewOrder, deleteOrderByID } from '../services/Orders.service.js' */
+import { getAllOrdersData, getOrderDataID, updateOrderByID, addNewOrder, deleteOrderByID } from '../services/buyOrders.service.js'
 import CustomError from '../classes/CustomError.class.js';
 
 /* ============= Mensaje de error ============= */

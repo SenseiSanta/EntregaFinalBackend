@@ -17,7 +17,7 @@ async function renderProductsAdmin(products) {
         return `
         <tr>
             <td>${item.product}</td>
-            <td>${item.price}</td>
+            <td>$${item.price}</td>
             <td>
                 <img width="30px" src=${item.img} alt="Prod. img">
             </td>
@@ -33,7 +33,7 @@ async function renderProductsNoAdmin(products) {
         return `
         <tr>
             <td>${item.product}</td>
-            <td>${item.price}</td>
+            <td>$${item.price}</td>
             <td>
                 <img width="30px" src=${item.img} alt="Prod. img">
             </td>
@@ -48,11 +48,12 @@ function enviarProducto() {
     const inputProduct = document.querySelector('#product').value
     const inputPrice = document.querySelector('#price').value
     const inputImg = document.querySelector('#img').value
+    const inputCategory = document.querySelector('#category').value
     const inputCode = document.querySelector('#code').value
     const inputDescription = document.querySelector('#description').value
     const inputStock = document.querySelector('#stock').value
 
-    if ((inputProduct=='')||(inputPrice=='')||(inputImg=='')||(inputCode=='')||(inputDescription=='')||(inputStock=='')) {
+    if ((inputProduct=='')||(inputPrice=='')||(inputImg=='')||(inputCategory=='')||(inputCode=='')||(inputDescription=='')||(inputStock=='')) {
         let error = document.getElementById('errorProductAdd');
         error.style.display = 'flex';
         error.innerText = 'Faltan datos para procesar el producto nuevo';
@@ -65,6 +66,7 @@ function enviarProducto() {
             price: inputPrice,
             img: inputImg,
             code: inputCode,
+            category: inputCategory,
             description: inputDescription,
             stock: inputStock
         }
@@ -92,7 +94,7 @@ socket.on('confirm-prod-delete', async (products) => {
             return `
             <tr>
                 <td>${item.product}</td>
-                <td>${item.price}</td>
+                <td>$${item.price*item.qty}</td>
                 <td>${item.qty}</td>
                 <td> <button onClick='delProdFromCart("${item.product}")'> -1 </button> </td>
             </tr>`
@@ -112,6 +114,6 @@ function delProdFromCart(product) {
 }
 
 // Confirmar compra y realizar orden
-function buyButton(product) {
-    socket.emit('', product);
+function buyButton() {
+    socket.emit('confirm-buy-order');
 }

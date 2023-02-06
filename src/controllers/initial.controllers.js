@@ -51,7 +51,7 @@ passport.deserializeUser(async (username, done)=> {
 
 /* =============== Encriptacion =============== */
 import bcrypt from 'bcrypt'
-import { getUserByUsername, addNewCart as cartAssignment } from '../services/initial.service.js';
+import { getUserByUsername, addNewCart as cartAssignment, getProductByID, searchMessagesByAuthor } from '../services/initial.service.js';
 
 async function hashPassGenerator (password) {
     const hashPassword = await bcrypt.hash(password, 10)
@@ -134,35 +134,41 @@ export async function registerPage(req, res) {
 //Procesamiento de las credenciales de REGISTRO
 export async function registerCredentials(req, res) {
     try {
-        const { username, password, phone, age, address, email } = req.body;
-        let infoUser = {
-        username: username,
-        password: await hashPassGenerator(password),
-        phone: phone,
-        age: age,
-        address: address,
-        email: email,
-        image: req.file.filename,
-        admin: false
-        }
-        if (username || password) {
-            if (username == 'unassigned') {
-                const invalidUserTagError = 'Ese nombre de usuario no puede ser utilizado en este sitio, intente con otro'
-                res.status(200).render('register', {invalidUserTagError})
-            } else {
-                let user = await getUserByUsername(username)
-                if (user == undefined) {
-                    let guardarDatos = await saveInfoUser(infoUser)
-                    let createCart = await cartAssignment(infoUser.username)
-                    if (createCart == false) {
-                        logger.error(`El carrito para ${infoUser.username} no fue creado`)
-                    }
-                    //sending email confimation to admin
-                    adminEmail(infoUser)
-                    res.status(201).redirect('/login')
+        const { password, passwordConf} = req.body;
+        if (password !== passwordConf) {
+            let passwordError = 'Las contraseñas no coinciden, intente nuevamente'
+            res.status(400).render('register', {passwordError})
+        } else {
+            const { username, phone, age, address, email } = req.body;
+            let infoUser = {
+            username: username,
+            password: await hashPassGenerator(password),
+            phone: phone,
+            age: age,
+            address: address,
+            email: email,
+            image: req.file.filename,
+            admin: false
+            }
+            if (username || password) {
+                if (username == 'unassigned') {
+                    const invalidUserTagError = 'Ese nombre de usuario no puede ser utilizado en este sitio, intente con otro'
+                    res.status(400).render('register', {invalidUserTagError})
                 } else {
-                    const errorRegister = 'El usuario que intenta registar ya existe, intente con otro nombre'
-                    res.status(200).render('register', {errorRegister})
+                    let user = await getUserByUsername(username)
+                    if (user == undefined) {
+                        let guardarDatos = await saveInfoUser(infoUser)
+                        let createCart = await cartAssignment(infoUser.username)
+                        if (createCart == false) {
+                            logger.error(`El carrito para ${infoUser.username} no fue creado`)
+                        }
+                        //sending email confimation to admin
+                        adminEmail(infoUser)
+                        res.status(201).redirect('/login')
+                    } else {
+                        const errorRegister = 'El usuario que intenta registar ya existe, intente con otro nombre'
+                        res.status(200).render('register', {errorRegister})
+                    }
                 }
             }
         }
@@ -210,6 +216,32 @@ export async function chatPage(req, res) {
     }
 }
 
+//Renderizado de la pagina del CHAT segun email
+export async function chatPageByEmail(req, res) {
+    try {
+        const username = req.user.username;
+        const requestedEmail = req.params['email'];
+        const email = req.user.email;
+        if (requestedEmail !== email) {
+            res.status(400).render('errorChatByEmail', {username})
+        } else {
+            let chatInfo = await searchMessagesByAuthor(username)
+            if (chatInfo == undefined) {
+                res.status(400).render('noMsgAuthor', {username})
+            } else {
+                console.log(chatInfo)
+                res.status(400).render('chatByEmail', {chatInfo, username})
+            }
+        }        
+    } catch (error) {
+        logger.error(error);
+        res.status(500).json({
+            status: 500,
+            error: internalError
+        })
+    }
+}
+
 //Cierre de sesion
 export async function logout(req, res) {
     try {
@@ -221,6 +253,21 @@ export async function logout(req, res) {
                 res.status(200).redirect('/login');
             }
         });
+    } catch (error) {
+        logger.error(error);
+        res.status(500).json({
+            status: 500,
+            error: internalError
+        })
+    }
+}
+
+export async function uniqueProductPage(req, res) {
+    try {
+        let prodID = req.params['id'];
+        let productInfo = await getProductByID(prodID);
+        let { product, description, category, price, stock, img } = productInfo
+        res.status(200).render('productById', {product, description, category, price, stock, img});
     } catch (error) {
         logger.error(error);
         res.status(500).json({

@@ -81,15 +81,13 @@ export async function updateProduct (req, res) {
 }
 
 export async function addProduct (req, res) {
-    let errorDetection = false
+    let errorDetection = false;
     try {
-        let { product, price, img, code, description, stock } = req.body;
+        let { product, price, img, category, code, description, stock } = req.body;
         // Validacion de datos
-        if (!product || !price || !img || !code || !description || !stock) {
-            logger.error(`El objeto ${product} no se ha guardado porque faltan datos del mismo`)
-            res.status(403).send('Faltan datos para guardar el item') 
-            errorDetection = true;
-            throw new CustomError(403, 'No se ha guardado nada', 'Faltan datos para la creacion del producto')
+        if (!product || !price || !img || !category || !code || !description || !stock) {
+            logger.error(`El objeto ${product} no se ha guardado porque faltan datos del mismo`);
+            res.status(403).json(new CustomError(403, 'No se ha guardado nada', 'Faltan datos para la creacion del producto'));
         } else {
             let prevData = await getAllProductsData()
             // Validacion de item (no repetido)
@@ -104,6 +102,7 @@ export async function addProduct (req, res) {
                 product,
                 price,
                 img,
+                category,
                 code,
                 description,
                 stock
@@ -115,7 +114,10 @@ export async function addProduct (req, res) {
         switch (errorDetection) {
             case true:
                 logger.error(`${error.description}. ${error.message}`);
-                res.status(error.status).send(error.message);
+                res.status(error.status).json({
+                    status: error.status,
+                    error: `${error.description}. ${error.message}`
+                });
                 break;
             default:
                 logger.error(error);

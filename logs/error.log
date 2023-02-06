@@ -794,3 +794,143 @@
     at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:216:23)
 [2023-02-03T16:12:11.694] [ERROR] default - Error: Algo ha ocurrido queriendo agregar el item al carrito
     at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:193:21)
+[2023-02-03T19:02:05.263] [ERROR] default - El objeto Monitor Samsung 24p no se ha guardado porque faltan datos del mismo
+[2023-02-03T19:02:58.895] [ERROR] default - El objeto Monitor Samsung 24p no se ha guardado porque faltan datos del mismo
+[2023-02-03T19:02:58.898] [ERROR] default - No se ha guardado nada. Faltan datos para la creacion del producto
+[2023-02-03T19:06:11.763] [ERROR] default - El objeto Monitor Samsung 24p no se ha guardado porque faltan datos del mismo
+[2023-02-03T19:07:53.545] [ERROR] default - El objeto Monitor Samsung 24p no se ha guardado porque faltan datos del mismo
+[2023-02-03T19:09:21.279] [ERROR] default - No se ha guardado nada. El producto existe en la Base de datos, intente con otro nombre
+[2023-02-03T19:10:54.260] [ERROR] default - Error: Hay un problema con el carrito de santi. Avise a nuestros administradores para corregir el inconveniente
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:171:15)
+[2023-02-03T19:11:45.546] [ERROR] default - Error: Hay un problema con el carrito de santi. Avise a nuestros administradores para corregir el inconveniente
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:171:15)
+[2023-02-03T19:11:47.027] [ERROR] default - Error: Algo ha ocurrido queriendo agregar el item al carrito
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:193:21)
+[2023-02-03T19:28:56.268] [ERROR] default - ReferenceError: getAllOrdersData is not defined
+    at getAllOrders (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/buyOrders.controllers.js:12:25)
+    at Layer.handle [as handle_request] (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\express\lib\router\index.js:175:3)
+    at router (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\express\lib\router\index.js:47:12)
+[2023-02-04T15:07:06.730] [ERROR] default - MongoServerClosedError: Server is closed
+    at Server.command (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:158:22)
+    at FindOperation.execute (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\find.js:36:16)
+    at FindOperation.<anonymous> (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\operation.js:29:18)
+    at node:internal/util:364:7
+    at new Promise (<anonymous>)
+    at FindOperation.executeAsync (node:internal/util:350:12)
+    at retryOperation (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:172:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperationAsync (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:127:20) {
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-02-04T15:13:41.557] [ERROR] default - MongoExpiredSessionError: Cannot use a session that has ended
+    at applySession (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\sessions.js:660:16)
+    at Connection.command (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:271:53)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:211:18
+    at Object.callback (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:302:13)
+    at ConnectionPool.processWaitQueue (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:481:33)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:205:37
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-02-04T15:13:42.158] [ERROR] default - MongoNotConnectedError: Client must be connected before running operations
+    at executeOperationAsync (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:24:19)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:12:45
+    at maybeCallback (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\utils.js:337:21)
+    at executeOperation (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:12:38)
+    at FindCursor._initialize (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cursor\find_cursor.js:54:50)
+    at [kInit] (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cursor\abstract_cursor.js:403:14)
+    at next (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cursor\abstract_cursor.js:475:22)
+    at node:internal/util:364:7
+    at new Promise (<anonymous>)
+    at next (node:internal/util:350:12) {
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-02-04T15:19:05.513] [ERROR] default - MongoNotConnectedError: Client must be connected before running operations
+    at executeOperationAsync (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:24:19)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:12:45
+    at maybeCallback (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\utils.js:337:21)
+    at executeOperation (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:12:38)
+    at FindCursor._initialize (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cursor\find_cursor.js:54:50)
+    at [kInit] (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cursor\abstract_cursor.js:403:14)
+    at next (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cursor\abstract_cursor.js:475:22)
+    at node:internal/util:364:7
+    at new Promise (<anonymous>)
+    at next (node:internal/util:350:12) {
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-02-04T15:35:34.167] [ERROR] default - MongoNotConnectedError: Client must be connected before running operations
+    at executeOperationAsync (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:24:19)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:12:45
+    at maybeCallback (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\utils.js:337:21)
+    at executeOperation (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:12:38)
+    at FindCursor._initialize (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cursor\find_cursor.js:54:50)
+    at [kInit] (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cursor\abstract_cursor.js:403:14)
+    at next (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cursor\abstract_cursor.js:475:22)
+    at node:internal/util:364:7
+    at new Promise (<anonymous>)
+    at next (node:internal/util:350:12) {
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-02-04T15:36:53.999] [ERROR] default - MongoNotConnectedError: Client must be connected before running operations
+    at executeOperationAsync (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:24:19)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:12:45
+    at maybeCallback (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\utils.js:337:21)
+    at executeOperation (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:12:38)
+    at FindCursor._initialize (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cursor\find_cursor.js:54:50)
+    at [kInit] (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cursor\abstract_cursor.js:403:14)
+    at next (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cursor\abstract_cursor.js:475:22)
+    at node:internal/util:364:7
+    at new Promise (<anonymous>)
+    at next (node:internal/util:350:12) {
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-02-04T15:39:05.143] [ERROR] default - MongoNotConnectedError: Client must be connected before running operations
+    at executeOperationAsync (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:24:19)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:12:45
+    at maybeCallback (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\utils.js:337:21)
+    at executeOperation (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:12:38)
+    at FindCursor._initialize (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cursor\find_cursor.js:54:50)
+    at [kInit] (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cursor\abstract_cursor.js:403:14)
+    at next (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\mongoose\node_modules\mongodb\lib\cursor\abstract_cursor.js:475:22)
+    at node:internal/util:364:7
+    at new Promise (<anonymous>)
+    at next (node:internal/util:350:12) {
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-02-04T15:39:05.164] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'map')
+    at getMainInfo (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:82:38)
+[2023-02-04T16:00:43.999] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:241:39)
+    at Socket.emit (node:events:513:28)
+    at Socket.emitUntyped (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\typed-events.js:69:22)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\socket.io\dist\socket.js:614:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2023-02-04T16:04:36.376] [ERROR] default - TypeError: Cannot read properties of undefined (reading '0')
+    at cartPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:190:30)
+[2023-02-04T16:06:14.078] [ERROR] default - ReferenceError: orderEmail is not defined
+    at Socket.<anonymous> (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/server.js:253:11)
+[2023-02-04T18:17:07.389] [ERROR] default - El id ingresado: ("alt=") -> No coincide con ningun dato existente, revise los parametros de entrada
+[2023-02-04T18:17:26.018] [ERROR] default - El id ingresado: ("alt=") -> No coincide con ningun dato existente, revise los parametros de entrada
+[2023-02-04T18:21:02.299] [ERROR] default - ReferenceError: Cannot access 'product' before initialization
+    at uniqueProductPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:243:69)
+[2023-02-04T18:26:59.374] [ERROR] default - El id ingresado: ("63dd85d4258ed747b2fb6ff") -> No coincide con ningun dato existente, revise los parametros de entrada
+[2023-02-04T18:26:59.384] [ERROR] default - TypeError: Cannot destructure property 'product' of 'productInfo' as it is undefined.
+    at uniqueProductPage (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:243:15)
+[2023-02-04T18:40:22.165] [ERROR] default - ReferenceError: admin is not defined
+    at chatPageByEmail (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/controllers/initial.controllers.js:226:58)
+    at Layer.handle [as handle_request] (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\express\lib\router\route.js:144:13)
+    at auth (file:///F:/Facultad/Cursos/Desarrollo%20Web%20Full%20Stack%20-%20CoderHouse/cursoBackend/EntregaFinal_Backend/src/routes/initial.routes.js:22:14)
+    at Layer.handle [as handle_request] (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\express\lib\router\layer.js:95:5)
+    at F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\express\lib\router\index.js:284:15
+    at param (F:\Facultad\Cursos\Desarrollo Web Full Stack - CoderHouse\cursoBackend\EntregaFinal_Backend\node_modules\express\lib\router\index.js:365:14)

@@ -70,16 +70,6 @@ export async function updateCart(cart, id) {
     }
 }
 
-export async function deleteCart(cart, product) { 
-    try {
-        let data = await cartsDB.getById(id)
-        return data
-    } catch (error) {
-        logger.error(error)
-        throw new Error (`Ha ocurrido un error al obtener los datos del carrito solicitado con ID ${id}`)
-    }
-}
-
 export async function deleteCartByID(id) { 
     try {
         let data = await cartsDB.deleteById(id)

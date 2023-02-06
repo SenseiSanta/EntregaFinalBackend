@@ -9,7 +9,7 @@ socket.on('from-server-message', messages =>{
     let mensajesDenorm = normalizr.denormalize(messages.result, schemaMensajes, messages.entities);
     let mensajesDenormSIZE = JSON.stringify(mensajesDenorm.messages).length;
     let compresion = parseInt((mensajesNormSIZE * 100) / mensajesDenormSIZE );
-    document.getElementById('compresionText').innerText = 'Compresion ' + compresion + '%'
+    //document.getElementById('compresionText').innerText = 'Compresion ' + compresion + '%'
     renderMessages(mensajesDenorm.messages)
 })
 

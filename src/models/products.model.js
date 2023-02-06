@@ -4,6 +4,7 @@ const ProductsSchema = new Schema({
     product: {type: String, require:true, max:20},
     description: {type: String, require:true, max:80},
     code: {type: String, require:true, max:10},
+    category: {type: String, require:true, max:20},
     price: {type: Number, require:true},
     stock: {type: Number, require:true},
     img: {type: String, require:true},

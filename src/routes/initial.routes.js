@@ -26,7 +26,7 @@ function auth (req, res, next) {
 };
 
 /* ============= Routing y metodos ============= */
-import { getMainInfo, loginPage, loginPageError, registerCredentials, registerPage, cartPage, logout, generateRandomProd, getServerInfo, getRandomThrows, chatPage } from '../controllers/initial.controllers.js';
+import { getMainInfo, uniqueProductPage, chatPageByEmail, loginPage, loginPageError, registerCredentials, registerPage, cartPage, logout, generateRandomProd, getServerInfo, getRandomThrows, chatPage } from '../controllers/initial.controllers.js';
 
 //Ruta principal -> Home
 routerInitial.get('/', compression(), auth, getMainInfo);
@@ -51,6 +51,12 @@ routerInitial.get('/carrito', auth, cartPage)
 
 //Ruta del render del CHAT
 routerInitial.get('/chat', auth, chatPage)
+
+//Ruta del render del CHAT segun email
+routerInitial.get('/chat/:email', auth, chatPageByEmail)
+
+//Ruta del render de PRODUCTOS segun id
+routerInitial.get('/productos/:id', uniqueProductPage)
 
 //Ruta para finalizar la sesion -> LOGOUT
 routerInitial.get('/logout', logout);

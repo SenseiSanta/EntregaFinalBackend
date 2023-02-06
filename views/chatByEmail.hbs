@@ -1,0 +1,13 @@
+<div class="">
+    <h3 style="color:rgba(94, 196, 20, 0.778);" > Mensajes de {{username}} </h3>
+    {{#if chatInfo}}
+        {{#each chatInfo}}
+        <div>
+            <p> Enviado: {{timestamp}} </p>
+            <p> Contenido: {{text}} </p>
+        </div>
+        {{/each}}
+    {{else}}
+        <h4> Aparentemente no hay mensajes, si el problema persiste por favor, comuniquese por <a href="/chat">ESTE MEDIO</a> </h4>
+    {{/if}}
+</div>

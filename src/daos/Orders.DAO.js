@@ -1,10 +1,10 @@
+import { logger } from "../utils/logger.js";
 import { ContainerMongoDB } from "../container/ContainerMongoDB.js"
-import MessagesModelMongoDB from "../models/messages.model.js"
-import {logger} from '../utils/logger.js';
+import OrdersModelMongoDB from "../models/orders.model.js"
 
-export class MessagesDAOMongoDB extends ContainerMongoDB {
+export class OrdersDAOMongoDB extends ContainerMongoDB {
     constructor() {
-        super(MessagesModelMongoDB);
+        super(OrdersModelMongoDB);
     }
 
     async updateById(id, obj){
@@ -14,8 +14,10 @@ export class MessagesDAOMongoDB extends ContainerMongoDB {
                 let doc = await this.colection.findById(id);
                 if (doc != null) {
                     let toUpdate = await this.colection.updateOne({_id: id}, {$set:{
-                        author: obj.author,
-                        text: obj.text
+                        username: obj.username,
+                        email: obj.email,
+                        order: obj.order,
+                        delivered: obj.delivered
                     }});
                     doc = await this.colection.findById(id);
                     return {state: {update: true, data: doc}}
@@ -35,18 +37,39 @@ export class MessagesDAOMongoDB extends ContainerMongoDB {
         }
     }
 
-    async getByAuthor(author) {
+    async getOrdersByUser(user) {
         try {
             await this.conn.connect();
-            console.log(author)
-            const doc = await this.colection.find({author: author});
+            const doc = await this.colection.find({username: user});
             if (doc == '') {
                 return undefined;
             } else {
                 return doc
             }
-        } catch (error) {
-            
+        }
+        catch(error) {
+            console.log(error);
+        } finally {
+            await this.conn.disconnect();
         }
     }
+
+    async save(cart, user, email) {
+        try {
+            await this.conn.connect();
+            let doc = await this.colection.create({
+                username: user,
+                email: email,
+                order: cart.products,
+                delivered: false
+            });
+            return doc
+        } catch (error) {
+            console.log(error)
+            return false
+        } finally {
+            await this.conn.disconnect();
+        }
+    }
+
 }

@@ -29,6 +29,28 @@ if (config.server.PERS === 'archive') {
 /*======================= Services  ======================*/
 /*========================================================*/
 
+/*============= Carritos ===========*/
+export async function addNewCart(owner) {
+    try {
+        let state = await cartsDB.save(owner);
+        return state
+    } catch (error) {
+        logger.error(error)
+        throw new Error (`Ha ocurrido un error al intentar crear el carrito. Intente nuevamente`)
+    }
+}
+
+export async function searchCartByOwner(owner) {
+    try {
+        let state = await cartsDB.getByOwner(owner);
+        return state
+    } catch (error) {
+        logger.error(error)
+        throw new Error (`Ha ocurrido un error al intentar crear el carrito. Intente nuevamente`)
+    }
+}
+
+/*============= Mensajes ===========*/
 export async function getMessages() {
     try {
         return await messagesDB.getAll();
@@ -37,6 +59,15 @@ export async function getMessages() {
     }
 }
 
+export async function searchMessagesByAuthor(author) {
+    try {
+        return await messagesDB.getByAuthor(author);
+    } catch (error) {
+        throw new Error ('Ha ocurrido un problema al obtener los mensajes')
+    }
+}
+
+/*============= Productos ===========*/
 export async function getProducts() {
     try {
         return await productsDB.getAll();
@@ -45,6 +76,15 @@ export async function getProducts() {
     }
 }
 
+export async function getProductByID(id) {
+    try {
+        return await productsDB.getById(id);
+    } catch (error) {
+        throw new Error ('Ha ocurrido un problema al obtener los productos')
+    }
+}
+
+/*============= Usuarios ===========*/
 export async function getUsers() {
     try {
         return await usersDB.getAll()
@@ -74,25 +114,5 @@ export async function saveInfoUser(userInfo) {
         return await usersDB.save(userInfo)
     } catch (error) {
         throw new Error (`Ha ocurrido un problema al guardar el usuario ${userInfo.username}`)
-    }
-}
-
-export async function addNewCart(owner) {
-    try {
-        let state = await cartsDB.save(owner);
-        return state
-    } catch (error) {
-        logger.error(error)
-        throw new Error (`Ha ocurrido un error al intentar crear el carrito. Intente nuevamente`)
-    }
-}
-
-export async function searchCartByOwner(owner) {
-    try {
-        let state = await cartsDB.getByOwner(owner);
-        return state
-    } catch (error) {
-        logger.error(error)
-        throw new Error (`Ha ocurrido un error al intentar crear el carrito. Intente nuevamente`)
     }
 }

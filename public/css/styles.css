@@ -141,3 +141,23 @@
 .footerProductAdd{
     display: flex;
 }
+
+.errorRouteBox{
+    margin: 0 auto;
+    width: 60%;
+    border: 1px black solid;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.errorSearchEmailChatBox{
+    margin: 0 auto;
+    width: 60%;
+    border: 1px black solid;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

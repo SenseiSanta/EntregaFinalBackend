@@ -8,6 +8,6 @@ const OrdersSchema = new Schema({
     timestamp: {type: Date}
 });
 
-const OrdersModelMongoDB = model('mensajes', OrdersSchema)
+const OrdersModelMongoDB = model('ordenes', OrdersSchema)
 
 export default OrdersModelMongoDB

@@ -18,6 +18,7 @@ export class ProductsDAOMongoDB extends ContainerMongoDB {
                         price: obj.price,
                         img: obj.img,
                         code: obj.code,
+                        category: obj.category,
                         description: obj.description,
                         stock: obj.stock
                     }});
