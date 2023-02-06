@@ -10,7 +10,6 @@
   "scripts": {
     "start": "node server.js",
     "start:dev": "nodemon server.js",
-    "build": "node src/batch/createTables.js",
     "test:axios": "node src/test/axiosRequests.test.js",
     "test:mocha": "mocha src/test/mochaTesting.test.js"
   },
