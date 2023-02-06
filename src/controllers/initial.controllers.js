@@ -2,7 +2,7 @@
 import {getMessages, getProducts, getUsers, getUserById, saveInfoUser, searchCartByOwner} from '../services/initial.service.js'
 import { logger } from '../utils/logger.js';
 import {registerEmailConfirmation as adminEmail} from '../utils/registerSendEmail.js';
-import { PORT } from '../../server.js';
+import { PORT } from '../../index.js';
 import os from 'os';
 
 /* =================== DTO =================== */
